@@ -27,8 +27,8 @@ describe '#open_account' do
 		bank = Bank.new('MyCiti')
 		account1 = bank.open_account('zlu', 500)
 		account2 = bank.open_account('omar', 5000)
-		account1[:balance].should = 500
-		account2[:balance].should = 5000
+		account1[:balance].should == 500
+		account2[:balance].should == 5000
 	end
 end
 
