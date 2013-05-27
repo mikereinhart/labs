@@ -1,16 +1,17 @@
 class Bank
 
 	attr_accessor :name
+	attr_accessor :accounts
 
 	def initialize(name)
 		@name = name
+		@accounts = []
 	end
 
 	def open_account(client_name, balance)
 		account = {}
 		account[:name] = client_name
 		account[:balance] = balance
-		@accounts =[]
 		@accounts << account
 
 		return account
