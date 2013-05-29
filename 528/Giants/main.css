@@ -1,0 +1,48 @@
+html {
+	background: url('http://www.sporthdwalls.com/wallpapers/1/new-york-giants-342-640x360.jpg') no-repeat center center fixed;
+	background-size: cover;
+	font: sans-serif;
+}
+body {
+	color: white;
+	font-size: 16px;
+	background: none;
+	width: 700px;
+	padding: 15px;
+	border-radius: 20px;
+}
+.player {
+	background: #a8a8a8;
+	border-radius: 10px;
+	width: 200px;
+	padding: 3px;
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+}
+.gray {
+	color: #a8a8a8;
+}
+h1 {
+	color: white;
+	padding: 7px;
+	font-size: 50px;
+	margin: 0px;
+	background-color: #B00000;
+	text-align: center;
+	border-radius: 7px;
+}
+h2 {
+	padding: 5px 0 5px 0;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+}
+a {
+	color: #a8a8a8;
+	text-decoration: none;
+}
+a:hover {
+	color: #B00000;
+	text-decoration: none;
+}
