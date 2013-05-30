@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/normalize.css">
+<link rel="stylesheet" href="/reset.css">
+<link rel="stylesheet" href="/style.css">
+
+
+<header>
+	<h1> Mike's Awesome Stock Page </h1>
+</header>
+<br><br>
+
+<form action='/quote' method='get'>
+	<input type='text' name='symbol' autofocus>
+	<button>Get Quote!</button>
+</from>
+<br><br><br>
+The current price for <%= @symbol %> is $<%= @price %>.
+<br> <br>
+<footer>
+	<p>The fee for using this sight is 7 times the printed stock price.</p>
+</footer>
