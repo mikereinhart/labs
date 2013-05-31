@@ -1,0 +1,17 @@
+<h1>Mike's To-Do List</h1>
+<br><br><br>
+<form action='/create' method='post'>
+	<h5>Title:</h5>
+	<input type='text' name='title' autofocus />
+	<h5>Description:</h5>
+	<input type='textarea' name='description' />
+	<h5>Completed?</h5> 
+	<input type='checkbox' name='completed' />	<br>
+	<button>Enter Task</button>
+</form>
+
+<ul>
+<% @tasks.each do |task| %>
+<li><%= task['title'].gsub('+',' ') %><button><a href="/completed">Completed!</a></button></li>
+<% end %>
+</ul>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MJR Bootstrap</title>
+	<link rel='stylesheet' href='/bootstrap/css/bootstrap.css'>
+	<script src='/js/jquery-2.0.1.min.js'></script>
+	<script src='/bootstrap/js/bootstrap.js'></script>
+</head>
+
+<body>
+	<div class='container'>
+		<div class='row'>
+			<div class='navbar-inverse navbar'>
+				<div class='navbar-inner'>
+					<a class='brand' href='#'>AwesomeCo.</a>
+					<ul class='nav'>
+						<li class='active'><a href='#'>Link 1</a></li>
+						<li><a href='#'>Link 2 </a></li>
+						<li><a href='#'>Link 3 </a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='span3'>
+				<div class='btn-group'>
+					<ul>
+						<li button class='btn btn-danger'>First Button</li>
+						<li button class='btn btn-success'>First Button</li>
+						<li button class='btn btn-warning'>First Button</li>
+					</lu>
+				</div>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='span3'>
+				<div class='btn-group'>
+					<a class='btn dropdown-toggle' data-toggle='dropdown' href='#'>
+						Dropdown
+						<span class='caret'></span>
+					</a>
+					<ul class='dropdown-menu' role='menu'>
+						<li><a href='#'><i class='icon-camera'></i>Menu Item 1</a></li>
+						<li class='divider'></li>
+						<li><a href='#'>Menu Item 2</a></li>
+						<li class='divider'></li>
+						<li><a href='#'>Menu Item 3</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<%= yield %>
+</body>
+</html>
+

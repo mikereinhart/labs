@@ -1,0 +1,15 @@
+<h1> Welcome to my Movie Site!</h1>
+
+<form action='/' method='get'>
+	<input type='text' name='title' autofocus />
+	<button>Get Movie</button>
+</form>
+
+<% if @movie_data_hash.present? %>
+<section id='movie_data'>
+	<p><%= @movie_data_hash['Title'] %></p>
+	<p><%= @movie_data_hash['Rated'] %></p>
+	<p><%= @movie_data_hash['Plot'] %></p>
+	<img src="<%= @movie_data_hash['Poster'] %>">
+</section>
+<% end %>
