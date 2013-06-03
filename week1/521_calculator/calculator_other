@@ -1,0 +1,28 @@
+
+def calculator
+	
+	while true
+		puts "(a)dd, (s)ubtract, (m)ultiple, (d)ivide, or enter 'q' to quit:"
+		math_type = gets.chomp.downcase
+		if math_type == 'q'
+			puts "Goodbye!"
+			break
+		end
+		case math_type
+			when 'a'
+				get_numbers
+				answer = @num_1 + @num_2
+			when 's'
+				get_numbers
+				answer = @num_1 - @num_2
+			when 'm'
+				get_numbers
+				answer = @num_1 * @num_2
+			when 'd'
+				get_numbers
+				answer = @num_1 / @num_2
+			else 
+				puts "Please enter either a, s, m, or d to do math. Enter q to quit:"
+		puts "The answer is #{answer}!"
+	end
+end
