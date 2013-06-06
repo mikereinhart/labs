@@ -1,0 +1,6 @@
+<h1><%= @moon.name %></h1>
+<br>
+
+<p>Diameter: <%= @moon.diameter %></p>
+<%= button_to 'Edit', edit_moon_path, method: :get %>
+<img src="<%= @moon.img_url %>">
