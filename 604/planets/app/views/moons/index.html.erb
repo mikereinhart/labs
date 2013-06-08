@@ -1,10 +1,10 @@
-<h1>Moons</h1>
+<h1 class='text'>Moons</h1>
 <!--<%= link_to 'Add a Moon', new_moon_path %> <br/> -->
 
-<ul>
+<ul class='text'>
 	<% @moons.each do |moon| %>
 	<li>
-		<p>Name: <%= link_to "#{moon['name']}", moon_path(moon) %></p>
+		<p><%= link_to "#{moon['name']}", moon_path(moon) %></p>
 		<p>Diameter: <%= moon.diameter %></p>
 		<img height='300px' width='auto' src="<%= moon.img_url %>">
 		<%= button_to 'Edit', edit_moon_path(moon), method: :get %> 

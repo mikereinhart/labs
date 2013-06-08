@@ -1,13 +1,22 @@
-<h1>THE PLANETS!</h1>
+<h1 class='text-center text'>THE PLANETS!</h1>
 <!-- <%= link_to 'Add a Planet (Not Pluto, though)', new_planet_path %> -->
 
-<ul>
+<ul class='text'>
 	<% @planets.each do |planet| %>
 	<li>
-		<p>Name: <%= link_to "#{planet['name']}", planet_path(planet) %></p>
+		<p><%= link_to "#{planet['name']}", planet_path(planet) %></p>
 		<p>Diameter: <%= planet.diameter %></p>
-
-		<img height='300px' width='auto' src="<%= planet.img_url %>"> <br>
+		<p>Moons: <% if planet.moons.empty? %>
+									<%= planet.name %> has no moons...yet.
+							<% else %>
+									<% planet.moons.each do |moon| %>
+										<%= planet.map{ |} %>
+<!-- trying to inser code that returns an array of the plents moons, then puts commas between them, PLUS an 'and' between the last two -->
+										<%= moon.name %>
+									<% end %>
+							<% end %>
+		</p>
+		<img class='my-image' src="<%= planet.img_url %>"> <br>
 		<%= link_to 'Edit', edit_planet_path(planet) %> <br>
 		<%= link_to 'Delete', planet_path(planet), method: :delete %> <br> <br>
 	</li>

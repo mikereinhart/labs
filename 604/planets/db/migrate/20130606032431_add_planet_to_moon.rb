@@ -1,5 +1,5 @@
 class AddPlanetToMoon < ActiveRecord::Migration
   def change
-  		add_column :moons, :planet, :string
+  		add_column :moons, :planet_id, :integer
   end
 end

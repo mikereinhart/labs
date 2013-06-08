@@ -1,4 +1,6 @@
-<h1><%= @planet.name %></h1>
-
-<p>Diameter: <%= @planet.diameter %></p>
+<h1 class='text'><%= @planet.name %></h1>
+<p class='text'> Moons: <% @planet.moons.each do |moon| %> 
+		<%= moon.name %> 
+		<% end %> </p>
+<p class='text'>Diameter: <%= @planet.diameter %></p>
 <img src="<%= @planet.img_url %>">
