@@ -1,0 +1,42 @@
+<html>
+Calc Demo!
+  <script>
+
+    var operation, 
+        firstNumber, 
+        secondNumber;
+    //^ unnecessary, but descriptive. could also be combined to be one line
+
+    while (operation != 'q') {
+      firstNumber = parseInt(prompt('Please enter the first number.'));
+      secondNumber = parseInt(prompt('Please enter the second number.'));
+      operation = prompt('Enter your desired operation. (a)dd, (s)ubtract, (d)ivide, (m)ultiply, or (q)uit.');
+
+      switch(operation) {
+        case 'a':
+          alert(firstNumber + secondNumber)
+          break
+        case 's':
+          alert(firstNumber -  secondNumber)
+          break
+        case 'd':
+          alert(firstNumber / secondNumber)
+          break
+        case 'm':
+          alert(firstNumber * secondNumber)
+          break
+        case 'q':
+          alert('Auf Widersehen')
+          break
+        default:
+          alert("Please enter a valid operation")
+          break
+      } 
+    }
+  
+    //operation = prompt('What type of operation would you like to do?');
+    //alert('THIS IS NOT A TEST');
+
+  </script>
+
+</html>
