@@ -2,29 +2,41 @@
 Calc Demo 2
   <script>
 
-    var operation, firstNumber, secondNumber;
-
-    function getNumber(msg) {
-      var num = parseInt(prompt(msg))
-      return num
+    var quit;
+    var messages = {
+      'first_num' : 'Please type the first number', 
+      "second_num" : 'Please type the second number',
+      'operation' : 'Please select an operation: (a)ddition, (s)ubtraction, (m)ultiplication, or (d)ivision.',
+      'quit' : "Do you want to quit? (y)es or (n)o."
     }
-    function getOperation(msg) {
-      var op = prompt(msg)
-      return op
+    //var msg1 = 'Please type the first number'
+    //var msg2 = 'Please the second number.'
+    //var msg3 = "Please select an operation: (a)ddition, (s)ubtraction, (m)ultiplication, or (d)ivision."
+    //var msg4 = "Do you want to quit? (y)es or (n)o."
+
+    function getInput(msg, is_num) {
+      //this whole is_num business is awesome. It is also the sole purpose of the getInput function. It just determines the format in which you take your input. if you say true, then it gives you the number of the selected input. if you set it to false, it leaves it as a string. therefore by either setting it as true or false you can decide the format of your input. 
+      is_num = is_num || false;
+
+      if (is_num) {
+        return parseInt(prompt(msg))
+      } else {
+        return prompt(msg)
+      }
     }
+    // the ', true' is us using is_num to set the prompt input to a number via the boolean.
+    alert(getInput(messages.first_num, true) + getInput(msg2, true))
 
-    while (operation != 'q') {
-      var msg1 = 'Please type the first number'
-      var msg2 = 'Please the second number.'
+    // need to make a function that does the follow:
+    // take the name of an operation and two numbers and apply that operation to the pair of numbers
 
+    function processInputs(num1, num2, operation) {
       switch(operation) {
         case 'a':
-          alert(getNumber(msg1) + getNumber(msg2))
-
           alert(firstNumber + secondNumber)
           break
         case 's':
-          alert(firstNumber - secondNumber)
+          alert(firstNumber -  secondNumber)
           break
         case 'd':
           alert(firstNumber / secondNumber)
@@ -33,7 +45,7 @@ Calc Demo 2
           alert(firstNumber * secondNumber)
           break
         case 'q':
-          alert('Goodbye')
+          alert('Auf Widersehen')
           break
         default:
           alert("Please enter a valid operation")
@@ -41,5 +53,11 @@ Calc Demo 2
       } 
     }
 
+
+    while (quit != 'y') {
+      processInputs(getInput(messages.first_num, true), getInput(messages.second_num, true), getInput(messages.operation));
+
+      quit = getInput(messages.quit)
+    }
   </script>
 </html>

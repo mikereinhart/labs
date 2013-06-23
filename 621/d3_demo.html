@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style>
+      div.bar {
+        display: inline-block;
+        width: 6px;
+        height: 50px;
+        margin-right: 5px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='a'>a</div>
+    <div id='b'>b</div>
+    <div id='c'>c</div>
+    <div id='d'>d</div>
+
+    <div id='bar'></div>
+  </body>
+
+  <script type='text/javascript'>
+    var dataset = []
+    for(var i=0; i<120; i++) {
+      dataset.push(Math.random() * 30)
+    }
+    // chain method where each line is a new link in the chain
+    d3.select('body').selectAll('#bar')
+      .data(dataset)
+      .enter()
+      .append('div')
+      .attr('class', 'bar')
+      .style('height', function(d) {
+        return d * 5 + 'px'
+      })
+
+      var w = 1500
+      var h = 100;
+
+      var svg = d3.select('body').append('svg')
+      svg.attr('width', w).attr('height', h)
+
+      var circles = svg.selectAll('circle')
+                        .data(dataset)
+                        .enter()
+                        .append('circle')
+
+      circles.attr('cx', function(d,i) {
+        return (i * 50) +25
+      })
+      .attr('cy', h/2)
+      .attr('r', function(d){return d})
+      .attr('fill', 'yellow')
+      .attr('stroke', 'orange')
+      .attr('stroke-width', function(d) {return d/2})
+
+  </script>
+
+</html>
+
+
+
